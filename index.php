@@ -135,18 +135,15 @@ else{
     </div>
 
     <div id="wrapper">
-        <!--<div id="menu">
-            <p class="welcome">Bienvenue, <b><?php echo $_SESSION['name']; ?></b><br><br></p>
-        </div> -->
         <div id="audio">
             <audio id="player" controls autoplay>
                 <source src="data/BO (Pablo Bozzi _Take Off_ edit).mp3" type="audio/mp3">
             </audio>
             <button id="MuteButton" onclick='Play()'><img src="data/Mute.png" style="width:200px;height:200px"></button>
-
         </div>
         <div id="chatbox">
-        <?php
+        <!--<?php
+            echo 'test';
             if(file_exists("log.html") && filesize("log.html") > 0){
                 $handle = fopen("log.html", "r");
                 $contents = fread($handle, filesize("log.html"));
@@ -154,7 +151,7 @@ else{
                 echo $contents;
             }
         ?>
-        </div>
+        </div>-->
      
         <form name="message" action="">
             <input name="submitmsg" type="image" src="/data/send.png" id="submitmsg" value="Envoyer" alt="Submit"/>
