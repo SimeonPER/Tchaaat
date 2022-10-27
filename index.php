@@ -33,11 +33,10 @@ $(document).ready(function(){
 	function loadLog(){		
 		var oldscrollHeight = $("#chatbox").attr("scrollHeight") - 20; //Scroll height before the request
 		$.ajax({
-			url: "log.html",
+			url: "log1.html",
 			cache: false,
 			success: function(html){		
 				$("#chatbox").html(html); //Insert chat log into the #chatbox div	
-				
 				//Auto-scroll			
 				var newscrollHeight = $("#chatbox").attr("scrollHeight") - 20; //Scroll height after the request
 				if(newscrollHeight > oldscrollHeight){
@@ -46,27 +45,22 @@ $(document).ready(function(){
 		  	},
 		});
 	}
-
-    //User entering the chat
-    $("#Enter").click(function(){
-		return false;
-	});
-
 });
-    function Play() {
-        var myAudio = document.getElementById("player");
-        if(myAudio.paused) {
-            myAudio.play();
-        }
-        else {
-            myAudio.pause();
-        }
+
+function Play() {
+    var myAudio = document.getElementById("player");
+    if(myAudio.paused) {
+        myAudio.play();
     }
+    else {
+        myAudio.pause();
+    }
+}
 </script>
 
 <?php
 session_start();
-$ActiveUsers = array();
+/*$ActiveUsers = array();*/
 
 function loginForm(){
     echo'
@@ -85,23 +79,23 @@ function loginForm(){
 if(isset($_POST['name'])){
     if($_POST['name'] != ""){
         $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
-        $nbUsers=count($ActiveUsers);
+        /*$nbUsers=count($ActiveUsers);
         $ActiveUsers[$nbUsers] = stripslashes(htmlspecialchars($_POST['name']));
-        $_SESSION['id'] = count($ActiveUsers);
+        $_SESSION['id'] = count($ActiveUsers);*/
     }
     else{
         echo '<span class="error">Please type in a name</span>';
     }
 
     //Simple enter message
-    $fp = fopen("log.html", 'a');
+    $fp = fopen("log1.html", 'a');
     fwrite($fp, "<div class='msgln'><i>". $_SESSION['name'] ." a rejoint la session.</i><br></div>\n");
     fclose($fp);
 }
 
 if(isset($_GET['logout'])){ 
     //Simple exit message
-    $fp = fopen("log.html", 'a');
+    $fp = fopen("log1.html", 'a');
     fwrite($fp, "<div class='msgln'><i>". $_SESSION['name'] .", petit ange parti trop tot</i><br></div>\n");
     fclose($fp);
     unset($ActiveUsers[$_SESSION['id']]);     
@@ -126,6 +120,9 @@ else{
 <div id="logo">
     <a href="index.php"><img src="data/SolutekWave.png"></a>
 </div>
+<div id="rooms">
+    <img class="clope" src="data/clope.png">
+</div>
 <div>  
     <div id="exit">
         <a id="exit" href="#"><p class=blink> Exit Game</p></a>  
@@ -142,16 +139,15 @@ else{
             <button id="MuteButton" onclick='Play()'><img src="data/Mute.png" style="width:200px;height:200px"></button>
         </div>
         <div id="chatbox">
-        <!--<?php
-            echo 'test';
-            if(file_exists("log.html") && filesize("log.html") > 0){
-                $handle = fopen("log.html", "r");
-                $contents = fread($handle, filesize("log.html"));
+        <?php
+            if(file_exists("log1.html") && filesize("log1.html") > 0){
+                $handle = fopen("log1.html", "r");
+                $contents = fread($handle, filesize("log1.html"));
                 fclose($handle);
                 echo $contents;
             }
         ?>
-        </div>-->
+        </div>
      
         <form name="message" action="">
             <input name="submitmsg" type="image" src="/data/send.png" id="submitmsg" value="Envoyer" alt="Submit"/>

@@ -75,6 +75,15 @@ button {
     transform: translate(-50%, -50%);
 }
 
+#rooms {
+    position:absolute;
+    top: 50%;
+}
+.clope {
+    width: 150px;
+    height: 100px;
+}
+
 #exit {
     margin: 1px auto;
     position: relative;
