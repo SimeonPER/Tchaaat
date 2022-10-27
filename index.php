@@ -52,8 +52,6 @@ $(document).ready(function(){
 		return false;
 	});
 
-
-
 });
     function Play() {
         var myAudio = document.getElementById("player");
@@ -145,7 +143,6 @@ else{
             <audio id="player" controls autoplay>
                 <source src="data/BO (Pablo Bozzi _Take Off_ edit).mp3" type="audio/mp3">
             </audio>
-
             <button id="MuteButton" onclick='Play()'><img src="data/Mute.png" style="width:200px;height:200px"></button>
 
         </div>
