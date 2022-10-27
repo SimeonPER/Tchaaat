@@ -1,0 +1,222 @@
+/* CSS Document */
+
+body {
+    font: 12px arial;
+    color: #222;
+    text-align: center;
+    padding: 1%;
+    background: url("data/wallpaper.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: ArcadeFont;
+    src: url("data/Arcade Classic V2.woff");
+}
+
+@font-face {
+    font-family: SynthFont;
+    src: url("data/Synthek LDR.woff");
+}
+
+form, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 80%;
+    align-content: baseline;
+    margin: 0 auto;
+    position: relative;
+}
+
+input {
+    font: 12px arial;
+}
+
+#logo {
+    float: left;
+}
+
+a {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#wrapper, #loginform {
+    margin: 0 auto;
+    padding-bottom: 25px;
+    width: 70%;
+}
+
+audio {
+    display: none;
+}
+
+button {
+    border: 0px;
+}
+
+#MuteButton {
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#exit {
+    margin: 1px auto;
+    position: relative;
+    top: 10px;
+    right: 2%;
+    float: right;
+}
+
+#loginform {
+    padding-top: 25px;
+    font-family: "ArcadeFont";
+    color: white;
+    font-size: 200%;
+    text-shadow: -1px 0 0 #fdff2a, -4px 0 0 #df4a42, 2px 0 0 #91fcfe, 4px 0 0 #4405fc;
+    width: 100%;
+}
+
+#enter {
+    background-color: transparent;
+    font-family: "ArcadeFont";
+    cursor: pointer;
+    position: relative;
+    border: 0px;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 100%);
+    color: white;
+    font-size: 180%;
+    text-shadow: -2px 0 0 #fdff2a, -4px 0 0 #df4a42, 2px 0 0 #91fcfe, 4px 0 0 #4405fc;
+}
+
+#chatbox {
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    height: 330px;
+    width: 90%;
+    overflow: auto;
+    color: white;
+}
+
+#usermsg {
+    width: 50%;
+    border: 1px solid #ACD8F0;
+}
+
+#submit {
+    width: 50px;
+}
+
+.error {
+    font-family: "ArcadeFont";
+    color: #ff0000;
+}
+
+#menu {
+    padding: 12.5px 25px 12.5px 25px;
+}
+
+#name, #usermsg {
+    background-color: #59f974;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    padding-top: 8px;
+    text-align: center;
+    margin: auto;
+}
+
+.welcome {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "SynthFont";
+    color: white;
+    font-size: 300%;
+}
+
+.logout {
+    float: right;
+}
+
+.msgln {
+    margin: 0 0 2px 0;
+    font-size: 110%;
+    font-family: Courier New, monospace;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+usermsg {
+    position: relative;
+}
+
+.blink {
+    color: #fff;
+    font-family: "ArcadeFont";
+    font-size: 40px;
+    right: 180px;
+    line-height: 40px;
+    letter-spacing: 5px;
+    text-shadow: -2px 0 0 #fdff2a, -4px 0 0 #df4a42, 2px 0 0 #91fcfe, 4px 0 0 #4405fc;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1cfff275;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #59f974;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #03c21c;
+    }
