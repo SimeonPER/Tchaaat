@@ -115,18 +115,17 @@ if(!isset($_SESSION['name'])){
     loginForm();
 }
 else{
-    echo '<div id="logo">
-        <a href="index.php"><img src="data/SolutekWave.png"></a>
-        </div>';
-        
-        $nbUsers=count($ActiveUsers);
+        /*$nbUsers=count($ActiveUsers);
 
         for($i = 0; $i < $nbUsers; $i++) {
             echo $ActiveUsers[$i];
             echo '</ br>';
-        }
+        }*/
 ?>
 
+<div id="logo">
+    <a href="index.php"><img src="data/SolutekWave.png"></a>
+</div>
 <div>  
     <div id="exit">
         <a id="exit" href="#"><p class=blink> Exit Game</p></a>  
