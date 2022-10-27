@@ -83,6 +83,12 @@ button {
     float: right;
 }
 
+#github {
+    position: absolute;
+    top: 70%;
+    right: 2%;
+}
+
 #loginform {
     padding-top: 25px;
     font-family: "ArcadeFont";

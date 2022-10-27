@@ -133,6 +133,9 @@ else{
     <div id="exit">
         <a id="exit" href="#"><p class=blink> Exit Game</p></a>  
     </div>
+    <div id="github">
+        <a href="https://github.com/MaximeEncrenaz/Tchaaat" target="_blank"><img src="/data/github.png" style="width:120px;height:60px"></a>  
+    </div>
 
     <div id="wrapper">
         <!--<div id="menu">
