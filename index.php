@@ -47,6 +47,7 @@ $(document).ready(function(){
 	}
 });
 
+// Handle music player
 function Play() {
     var myAudio = document.getElementById("player");
     if(myAudio.paused) {

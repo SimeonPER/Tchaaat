@@ -79,10 +79,10 @@ button {
     position:absolute;
     top: 50%;
 }
-.clope {
-    width: 150px;
-    height: 100px;
-}
+    .clope {
+        width: 150px;
+        height: 100px;
+    }
 
 #exit {
     margin: 1px auto;
@@ -155,7 +155,7 @@ button {
     box-sizing: border-box;
     border: 2px solid #ffffff;
     border-radius: 4px;
-    padding-top: 8px;
+    padding-top: 5px;
     text-align: center;
     margin: auto;
 }
@@ -206,32 +206,16 @@ usermsg {
     }
 }
 
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-}
-
-/* width */
+/* Scrool bar customization*/
 ::-webkit-scrollbar {
     width: 10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
     background: #1cfff275;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #59f974;
 }
-
-    /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background: #03c21c;
     }
