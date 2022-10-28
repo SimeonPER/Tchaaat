@@ -120,9 +120,9 @@ else{
 <div id="logo">
     <a href="index.php"><img src="data/SolutekWave.png"></a>
 </div>
-<div id="rooms">
+<!--<div id="rooms">
     <img class="clope" src="data/clope.png">
-</div>
+</div>-->
 <div>  
     <div id="exit">
         <a id="exit" href="#"><p class=blink> Exit Game</p></a>  
@@ -136,7 +136,10 @@ else{
             <audio id="player" controls autoplay>
                 <source src="data/BO (Pablo Bozzi _Take Off_ edit).mp3" type="audio/mp3">
             </audio>
-            <button id="MuteButton" onclick='Play()'><img src="data/Mute.png" style="width:200px;height:200px"></button>
+            <button id="MuteButton" onclick='Play()'>
+                <p class="msgln" style="font-style: italic;font-size:80%;">Pablo Bozzi remix <br> Endrick Schroeder feat. Jul<br></p>
+                <img src="data/Mute.png" style="width:200px;height:200px">
+            </button>
         </div>
         <div id="chatbox">
         <?php
