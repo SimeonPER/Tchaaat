@@ -10,6 +10,7 @@
 <script type="text/javascript">
 
 // jQuery Document
+//test
 $(document).ready(function(){
     //If user wants to end session
 	$("#exit").click(function(){
